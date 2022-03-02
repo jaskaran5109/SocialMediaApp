@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#979797"
+    tools:context=".ChatsActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messages_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linearId" />
+
+    <LinearLayout
+        android:id="@+id/linearId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/chat_ImageBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/chat_input"
+            android:background="@drawable/buttons"
+            android:src="@drawable/image_uploadd" />
+
+        <EditText
+            android:id="@+id/chat_input"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/inputs"
+            android:hint="Write a message"
+            android:inputType="textMultiLine"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+        <ImageButton
+            android:id="@+id/chat_sendBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/chat_input"
+            android:background="@drawable/buttons"
+            android:src="@drawable/send40" />
+    </LinearLayout>
+</RelativeLayout>

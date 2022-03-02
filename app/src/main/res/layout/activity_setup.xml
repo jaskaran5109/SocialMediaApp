@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register"
+    tools:context=".SetupActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image_icon"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/profile"
+                tools:ignore="InvalidId" />
+
+            <EditText
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_image_icon"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/inputs"
+                android:drawableLeft="@drawable/username"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Enter your username"
+                android:inputType="textMultiLine"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
+
+            <EditText
+                android:id="@+id/fullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userName"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/inputs"
+                android:drawableLeft="@drawable/name"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Full Name"
+                android:inputType="textMultiLine"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
+
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/country"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@id/fullName"-->
+            <!--                android:layout_marginStart="20dp"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:layout_marginEnd="10dp"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                android:background="@drawable/inputs"-->
+            <!--                android:drawableLeft="@drawable/age"-->
+            <!--                android:ems="10"-->
+            <!--                android:gravity="start|top"-->
+            <!--                android:hint="Country"-->
+            <!--                android:inputType="textMultiLine"-->
+            <!--                android:padding="14dp"-->
+            <!--                android:textColor="#000000"-->
+            <!--                android:textColorHint="#000000" />-->
+
+            <Spinner
+                android:id="@+id/country"
+                style="@style/mySpinnerItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fullName"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="20dp"
+                android:spinnerMode="dialog"
+                />
+
+
+            <TextView
+                android:id="@+id/dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/country"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/inputs"
+                android:drawableLeft="@drawable/age"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Date Of Birth"
+                android:inputType="textMultiLine"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
+
+            <EditText
+                android:id="@+id/Gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dob"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/inputs"
+                android:drawableLeft="@drawable/person"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Gender"
+                android:inputType="textMultiLine"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
+
+            <EditText
+                android:id="@+id/relationShipStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Gender"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/inputs"
+                android:drawableLeft="@drawable/person"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Relationship Status"
+                android:inputType="textMultiLine"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
+
+            <Button
+                android:id="@+id/button_save"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relationShipStatus"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/buttons"
+                android:text="Save"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="WebViewLayout">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/message_profile_image"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/profile" />
+    <TextView
+        android:id="@+id/receiver_message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/message_profile_image"
+        android:layout_toRightOf="@id/message_profile_image"
+        android:background="@drawable/receiver_message_text_bg"
+        android:text="Receiver Message"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/sender_message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/receiver_message_text"
+        android:layout_alignParentTop="true"
+        android:maxWidth="300dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/sender_message_text_bg"
+        android:padding="10dp"
+        android:text="Sender Message"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/receiver_message_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:maxWidth="300dp"
+        android:layout_toEndOf="@id/message_profile_image"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/sender_message_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:scaleType="centerCrop" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</RelativeLayout>

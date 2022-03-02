@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d700"
+    android:padding="10dp"
+    tools:context=".PersonProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/person_profile_pic"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/person_fullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/person_profile_pic"
+                android:layout_marginTop="5dp"
+                android:text="Jaskaran Singh"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/person_userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/person_fullName"
+                android:text="Username"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/person_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/person_userName"
+                android:layout_marginTop="5dp"
+                android:text="Hey ,there"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#8F8D8D"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/person_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/person_status"
+                android:layout_marginTop="60dp"
+                android:text="Country"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/person_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/person_country"
+                android:layout_marginTop="2dp"
+                android:text="DOB"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/person_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/person_dob"
+                android:layout_marginTop="2dp"
+                android:text="Gender"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/person_relationShipStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/person_gender"
+                android:layout_marginTop="2dp"
+                android:text="Relationship Status"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_below="@+id/person_relationShipStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/person_sendFriendRequest"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:background="@drawable/buttons"
+                    android:text="Send Request"
+                    android:layout_margin="10dp"
+                    android:textSize="14sp"
+                    android:layout_centerHorizontal="true" />
+
+                <Button
+                    android:id="@+id/person_deleteFriendRequest"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:background="@drawable/buttons"
+                    android:text="Decline Request"
+                    android:layout_margin="10dp"
+                    android:textSize="14sp"
+                    android:layout_centerHorizontal="true" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
